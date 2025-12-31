@@ -1,9 +1,9 @@
 {
-  "id": "jokes-on-you",
+  "id": "jokes_on_you",
   "name": "Joke's on You",
   "author": ["Mak_Rat", "tepid", "yoshikirby26"],
   "description": "TBD description",
-  "prefix": "j-o-y",
+  "prefix": "j_o_y",
   "main_file": "joy.lua",
   "badge_colour": "000000",
   "badge_text_colour": "ffffff",
