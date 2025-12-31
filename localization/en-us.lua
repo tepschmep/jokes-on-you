@@ -4,7 +4,16 @@ return {
         Blind = {},
         Edition = {},
         Enhanced = {},
-        Joker = {},
+        Joker = {
+            j_o_y_paddleball = {
+                name = "Paddleball",
+                text = {
+                    "This Joker gains {X:mult,C:white}X#1#{} Mult",
+                    "per reroll in the last shop",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
+                }
+            }
+        },
         Other = {},
         Planet = {},
         Spectral = {},
