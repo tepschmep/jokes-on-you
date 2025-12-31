@@ -40,3 +40,18 @@ SMODS.Joker {
         if context.joker_main then return { xmult = ex.xmult } end
     end
 }
+
+SMODS.Joker {
+    key = "jimbazzaro",
+    atlas = "jokers",
+    pos = { x = 2, y = 0 },
+    soul_pos = { x = 3, y = 0 },
+    rarity = 1,
+    cost = 2,
+    blueprint_compat = true,
+    calculate = function(self, card, context)
+        if context.reroll_shop then
+            -- TODO figure out how to generate a random Tarot card
+        end
+    end
+}

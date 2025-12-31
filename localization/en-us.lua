@@ -12,6 +12,14 @@ return {
                     "per reroll in the last shop",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
                 }
+            },
+            j_o_y_jimbazzaro = {
+                name = "Jimbazzaro",
+                text = {
+                    "Create a {C:tarot}Tarot{} card",
+                    "when rerolling the shop",
+                    "{C:inactive}(Must have room)"
+                }
             }
         },
         Other = {},
