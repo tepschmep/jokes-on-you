@@ -1,0 +1,12 @@
+{
+  "id": "jokes-on-you",
+  "name": "Joke's on You",
+  "author": ["MarioMak967", "tepid", "yoshikirby26"],
+  "description": "TBD description",
+  "prefix": "j-o-y",
+  "main_file": "joy.lua",
+  "badge_colour": "000000",
+  "badge_text_colour": "ffffff",
+  "version": "0.1.0~dev",
+  "dependencies": ["Steamodded (>=1.*)"]
+}
