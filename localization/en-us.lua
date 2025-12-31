@@ -20,6 +20,14 @@ return {
                     "when rerolling the shop",
                     "{C:inactive}(Must have room)"
                 }
+            },
+            j_o_y_macaroni_art = {
+                name = "Macaroni Art",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult if",
+                    "played hand is a single",
+                    "numbered {C:diamonds}Diamond{} card"
+                }
             }
         },
         Other = {},
