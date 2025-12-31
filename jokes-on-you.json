@@ -1,7 +1,7 @@
 {
   "id": "jokes-on-you",
   "name": "Joke's on You",
-  "author": ["MarioMak967", "tepid", "yoshikirby26"],
+  "author": ["Mak_Rat", "tepid", "yoshikirby26"],
   "description": "TBD description",
   "prefix": "j-o-y",
   "main_file": "joy.lua",
