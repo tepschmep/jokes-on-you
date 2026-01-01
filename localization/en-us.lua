@@ -28,6 +28,13 @@ return {
                     "{C:attention}numbered{} {C:diamonds}Diamond{} card,",
                     "it gives {X:mult,C:white}X#1#{} Mult"
                 }
+            },
+            j_o_y_down_the_drain = {
+                name = "Down the Drain",
+                text = {
+                    "{C:red}+#1#{} discard this round if", 
+                    "{C:attention}discarded{} hand contains a {C:attention}Flush{}"
+                }
             }
         },
         Other = {},

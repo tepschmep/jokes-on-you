@@ -75,3 +75,29 @@ SMODS.Joker {
         end
     end
 }
+
+SMODS.Joker {
+    key = "down_the_drain",
+    atlas = "jokers",
+    pos = {x = 11, y = 0},
+    rarity = 2,
+    blueprint_compat = false,
+    cost = 6,
+    discovered = true,
+    config = {extra = {d_size = 1}},
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.d_size}}
+    end,
+    calculate = function(self, card, context)
+        if context.pre_discard then
+            local _, _, poker_hands = G.FUNCS.get_poker_hand_info(G.hand.highlighted)
+            if next(poker_hands["Flush"]) then
+                ease_discard(card.ability.extra.d_size)
+                return {
+                    message = "Flushed!",
+                    colour = G.C.BLUE
+                }
+            end
+        end
+    end
+}
