@@ -11,9 +11,8 @@ SMODS.Joker {
     pos = { x = 0, y = 0 },
     soul_pos = { x = 1, y = 0 },
     rarity = 3,
-    blueprint_compat = true,
     cost = 8,
-    discovered = true,
+    blueprint_compat = true,
     config = { extra = { xmult_per_reroll = 0.5, xmult = 1 } },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.xmult_per_reroll, card.ability.extra.xmult } }
@@ -81,9 +80,8 @@ SMODS.Joker {
     atlas = "jokers",
     pos = {x = 11, y = 0},
     rarity = 2,
-    blueprint_compat = false,
     cost = 6,
-    discovered = true,
+    blueprint_compat = true,
     config = {extra = {d_size = 1}},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.d_size}}

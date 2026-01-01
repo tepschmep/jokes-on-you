@@ -9,7 +9,7 @@ return {
                 name = "Paddleball",
                 text = {
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
-                    "per {C:attention}reroll{} in the last shop",
+                    "per {C:green}Reroll{} in the last shop",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
                 }
             },
@@ -17,7 +17,7 @@ return {
                 name = "Jimbazzaro",
                 text = {
                     "Create a {C:tarot}Tarot{} card",
-                    "when shop is {C:attention}rerolled{}",
+                    "when shop is {C:green}Rerolled{}",
                     "{C:inactive}(Must have room)"
                 }
             },
@@ -32,8 +32,9 @@ return {
             j_o_y_down_the_drain = {
                 name = "Down the Drain",
                 text = {
-                    "{C:red}+#1#{} discard this round if", 
-                    "{C:attention}discarded{} hand contains a {C:attention}Flush{}"
+                    "{C:red}+#1#{} discard this round", 
+                    "if {C:attention}discarded{} hand",
+                    "contains a {C:attention}Flush{}"
                 }
             }
         },
