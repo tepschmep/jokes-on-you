@@ -24,7 +24,7 @@ return {
             j_o_y_macaroni_art = {
                 name = "Macaroni Art",
                 text = {
-                    "If played hand is a single",
+                    "If scoring hand is a single",
                     "{C:attention}numbered{} {C:diamonds}Diamond{} card,",
                     "it gives {X:mult,C:white}X#1#{} Mult"
                 }

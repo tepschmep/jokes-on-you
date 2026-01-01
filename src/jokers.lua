@@ -70,7 +70,7 @@ SMODS.Joker {
     calculate = function(self, card, context)
         local ex = card.ability.extra
 
-        if context.individual and context.cardarea == G.play and #context.full_hand == 1 then
+        if context.individual and context.cardarea == G.play and #context.scoring_hand == 1 then
             if context.other_card:get_id() < 11 and context.other_card:is_suit("Diamonds") then return { xmult = ex.xmult } end
         end
     end
