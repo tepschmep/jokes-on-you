@@ -139,7 +139,7 @@ SMODS.Joker {
 
         if context.joker_main then return { xmult = ex.xmult } end
 
-        if context.after then
+        if context.after and not context.blueprint then
             local ret = {}
 
             ex.hands_left = ex.hands_left - 1
