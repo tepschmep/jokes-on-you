@@ -32,9 +32,15 @@ return {
             j_o_y_down_the_drain = {
                 name = "Down the Drain",
                 text = {
-                    "{C:red}+#1#{} discard this round", 
-                    "if {C:attention}discarded{} hand",
-                    "contains a {C:attention}Flush{}"
+                    "{C:red}+#1#{} discard this round if", 
+                    "{C:attention}discarded{} hand contains a {C:attention}Flush{}"
+                }
+            },
+            j_o_y_command_tower = {
+                name = "Command Tower",
+                text = {
+                    "{C:attention}Wild Cards{} held in hand",
+                    "give {C:money}$#1#{} at end of round"
                 }
             }
         },

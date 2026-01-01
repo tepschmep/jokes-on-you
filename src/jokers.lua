@@ -99,3 +99,21 @@ SMODS.Joker {
         end
     end
 }
+
+SMODS.Joker {
+    key = "command_tower",
+    atlas = "jokers",
+    pos = {x = 2, y = 1},
+    rarity = 1,
+    cost = 4,
+    blueprint_compat = true,
+    config = {extra = {payout = 4}},
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.payout}}
+    end,
+    calculate = function(self, card, context)
+        if context.end_of_round and not context.game_over and context.individual and context.cardarea == G.hand and SMODS.has_enhancement(context.other_card, 'm_wild') then
+            return {dollars = card.ability.extra.payout}
+        end
+    end
+}
