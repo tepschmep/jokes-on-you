@@ -32,7 +32,7 @@ return {
             j_o_y_down_the_drain = {
                 name = "Down the Drain",
                 text = {
-                    "{C:red}+#1#{} discard this round if", 
+                    "{C:red}+#1#{} discard this round if",
                     "{C:attention}discarded{} hand contains a {C:attention}Flush{}"
                 }
             },
@@ -41,6 +41,15 @@ return {
                 text = {
                     "{C:attention}Wild Cards{} held in hand",
                     "give {C:money}$#1#{} at end of round"
+                }
+            },
+            j_o_y_immortal_snail = {
+                name = "Immortal Snail",
+                text = {
+                    "This Joker gains {X:mult,C:white}X#1#{} Mult",
+                    "per played hand",
+                    "{C:red,E:2}Die{} in {C:attention,s:1.11}#3#{} hands",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
                 }
             }
         },
@@ -68,7 +77,9 @@ return {
         suits_plural = {},
         suits_singular = {},
         tutorial = {},
-        v_dictionary = {},
+        v_dictionary = {
+            j_o_y_hands_left = "#1# left..."
+        },
         v_text = {}
     },
 }
