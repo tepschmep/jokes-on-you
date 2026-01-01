@@ -67,7 +67,9 @@ return {
         blind_states = {},
         challenge_names = {},
         collabs = {},
-        dictionary = {},
+        dictionary = {
+          k_you_lose = "You Lose!"
+        },
         high_scores = {},
         labels = {},
         poker_hand_descriptions = {},
@@ -77,9 +79,7 @@ return {
         suits_plural = {},
         suits_singular = {},
         tutorial = {},
-        v_dictionary = {
-            j_o_y_hands_left = "#1# left..."
-        },
+        v_dictionary = {},
         v_text = {}
     },
 }

@@ -109,11 +109,16 @@ SMODS.Joker {
     blueprint_compat = true,
     config = {extra = {payout = 4}},
     loc_vars = function(self, info_queue, card)
+        
+        info_queue[#info_queue+1] = G.P_CENTERS.m_wild
+        
         return {vars = {card.ability.extra.payout}}
     end,
     calculate = function(self, card, context)
         if context.end_of_round and not context.game_over and context.individual and context.cardarea == G.hand and SMODS.has_enhancement(context.other_card, 'm_wild') then
+            
             return {dollars = card.ability.extra.payout}
+            
         end
     end
 }
@@ -145,7 +150,7 @@ SMODS.Joker {
             ex.hands_left = ex.hands_left - 1
 
             if ex.hands_left > 0 then
-                ret.message = localize { type = "variable", key = "j_o_y_hands_left", vars = { ex.hands_left } }
+                ret.message = localize { type = "variable", key = "a_remaining", vars = { ex.hands_left } }
                 ret.colour = G.C.RED
 
                 ret.func = function()
@@ -160,16 +165,19 @@ SMODS.Joker {
             end
 
             if ex.hands_left == 0 then
-                ret.message = localize "k_active_ex"
-                ret.colour = G.C.RED
+                ret.message = localize "k_you_lose"
+                ret.colour = G.C.BLACK
 
                 ret.effect = true
                 ret.func = function()
                     G.E_MANAGER:add_event(Event {
-                        trigger = "after",
+                        trigger = 'after',
+                        delay = 0.5,
                         func = function()
-                            G.GAME.current_round.hands_left = 0
-                            return true
+                            if G.STAGE == G.STAGES.RUN then 
+                                G.STATE = G.STATES.GAME_OVER
+                                G.STATE_COMPLETE = false
+                            end
                         end
                     })
                 end
