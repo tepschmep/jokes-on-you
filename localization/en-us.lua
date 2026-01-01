@@ -9,7 +9,7 @@ return {
                 name = "Paddleball",
                 text = {
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
-                    "per reroll in the last shop",
+                    "per {C:attention}reroll{} in the last shop",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
                 }
             },
@@ -17,16 +17,16 @@ return {
                 name = "Jimbazzaro",
                 text = {
                     "Create a {C:tarot}Tarot{} card",
-                    "when rerolling the shop",
+                    "when shop is {C:attention}rerolled{}",
                     "{C:inactive}(Must have room)"
                 }
             },
             j_o_y_macaroni_art = {
                 name = "Macaroni Art",
                 text = {
-                    "{X:mult,C:white}X#1#{} Mult if",
-                    "played hand is a single",
-                    "numbered {C:diamonds}Diamond{} card"
+                    "If played hand is a single",
+                    "{C:attention}numbered{} {C:diamonds}Diamond{} card,",
+                    "it gives {X:mult,C:white}X#1#{} Mult"
                 }
             }
         },
