@@ -34,6 +34,7 @@ load {
         "sprue",
         "crit_chance_item",
         "sunday_comic",
+        "trivia_card",
 
         -- Uncommon Jokers
         "down_the_drain",

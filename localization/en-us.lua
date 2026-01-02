@@ -110,6 +110,13 @@ return {
                     "this round when a",
                     "{C:attention}Wild Card{} is scored"
                 }
+            },
+            j_o_y_trivia_card = {
+                name = "Trivia Card",
+                text = {
+                    "All {C:tarot}Wheel of Fortune{} cards", 
+                    "in the shop are {C:attention}free{}"
+                }
             }
         },
         Other = {},
