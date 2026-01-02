@@ -75,7 +75,11 @@ return {
                 }
             },
             j_o_y_jimbo_in_your_face = {
-                name = "Jimbo But No One Has the Heart to Tell Him He's Too Close to the Camera",
+                name = {
+                    "Jimbo",
+                    "{C:inactive,E:1}but no one has the heart to tell{}",
+                    "{C:inactive,E:1}him he's too close to the camera{}"
+                },
                 text = {
                     "{C:mult}+#1#{} Mult"
                 }
@@ -114,7 +118,7 @@ return {
             j_o_y_trivia_card = {
                 name = "Trivia Card",
                 text = {
-                    "All {C:tarot}Wheel of Fortune{} cards", 
+                    "All {C:tarot}Wheel of Fortune{} cards",
                     "in the shop are {C:attention}free{}"
                 }
             }
