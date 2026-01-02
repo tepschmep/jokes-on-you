@@ -15,10 +15,16 @@ local haunted_mirror = SMODS.Joker {
 }
 
 haunted_mirror.loc_vars = function(self, info_queue, card)
+    local label
+
     if G.j_o_y_last_sold_joker then
-        table.insert(info_queue, G.j_o_y_last_sold_joker.config.center)
+        local center = G.j_o_y_last_sold_joker.config.center
+
+        table.insert(info_queue, center)                                            -- Copied joker tooltip
+        label = localize { type = "name_text", set = center.set, key = center.key } -- Copied joker name
+    else
+        label = localize "k_none"
     end
-    local label = G.j_o_y_last_sold_joker and localize({ type = "name_text", set = G.j_o_y_last_sold_joker.config.center.set, key = G.j_o_y_last_sold_joker.config.center.key }) or localize "k_none"
 
     return {
         vars = { label }
