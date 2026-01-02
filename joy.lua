@@ -40,6 +40,7 @@ load {
 
         -- Rare Jokers
         "immortal_snail",
+        "jimbo_in_your_face",
         "paddleball"
     }
 }

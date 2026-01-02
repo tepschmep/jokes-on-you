@@ -73,6 +73,12 @@ return {
                     "Create a random {C:attention}Tag{}",
                     "when {C:attention}Small Blind{} is selected"
                 }
+            },
+            j_o_y_jimbo_in_your_face = {
+                name = "Jimbo But No One Has the Heart to Tell Him He's Too Close to the Camera",
+                text = {
+                    "{C:mult}+#1#{} Mult"
+                }
             }
         },
         Other = {},
