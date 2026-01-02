@@ -102,6 +102,14 @@ return {
                     "per copy of itself",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
                 }
+            },
+            j_o_y_wild_draw_4 = {
+                name = "Wild Draw 4",
+                text = {
+                    "{C:attention}+#1#{} hand size",
+                    "this round when a",
+                    "{C:attention}Wild Card{} is scored"
+                }
             }
         },
         Other = {},

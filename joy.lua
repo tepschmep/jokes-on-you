@@ -39,6 +39,7 @@ load {
         "down_the_drain",
         "silly_band",
         "macaroni_art",
+        "wild_draw_4",
 
         -- Rare Jokers
         "haunted_mirror",
