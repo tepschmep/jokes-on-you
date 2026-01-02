@@ -29,6 +29,7 @@ load {
     filenames = {
         -- Common Jokers
         "command_tower",
+        "foam_finger",
         "jimbazzaro",
         "sprue",
         "crit_chance_item",

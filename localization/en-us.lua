@@ -87,6 +87,13 @@ return {
                     "of last sold Joker",
                     "{C:inactive}(Currently {C:attention}#1#{C:inactive})"
                 }
+            },
+            j_o_y_foam_finger = {
+                name = "Foam Finger",
+                text = {
+                    "{C:blue}+#1#{} hand",
+                    "each round"
+                }
             }
         },
         Other = {},
