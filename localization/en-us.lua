@@ -94,6 +94,14 @@ return {
                     "{C:blue}+#1#{} hand",
                     "each round"
                 }
+            },
+            j_o_y_silly_band = {
+                name = "Silly Band",
+                text = {
+                    "This Joker gains {X:mult,C:white}X#1#{} Mult",
+                    "per copy of itself",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
+                }
             }
         },
         Other = {},

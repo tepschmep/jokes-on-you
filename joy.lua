@@ -37,6 +37,7 @@ load {
 
         -- Uncommon Jokers
         "down_the_drain",
+        "silly_band",
         "macaroni_art",
 
         -- Rare Jokers
