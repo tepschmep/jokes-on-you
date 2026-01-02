@@ -79,6 +79,14 @@ return {
                 text = {
                     "{C:mult}+#1#{} Mult"
                 }
+            },
+            j_o_y_haunted_mirror = {
+                name = "Haunted Mirror",
+                text = {
+                    "Acts as two copies",
+                    "of last sold Joker",
+                    "{C:inactive}(Currently {C:attention}#1#{C:inactive})"
+                }
             }
         },
         Other = {},

@@ -39,6 +39,7 @@ load {
         "macaroni_art",
 
         -- Rare Jokers
+        "haunted_mirror",
         "immortal_snail",
         "jimbo_in_your_face",
         "paddleball"
