@@ -7,8 +7,8 @@ local sunday_comic = SMODS.Joker {
     },
     unlocked = true,
     discovered = false,
-    rarity = 3, -- Rare
-    cost = 8,
+    rarity = 1, --Common
+    cost = 6,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true
