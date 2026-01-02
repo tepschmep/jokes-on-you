@@ -66,6 +66,13 @@ return {
                     "played cards to give",
                     "{X:mult,C:white}X#1#{} Mult when scored"
                 }
+            },
+            j_o_y_sunday_comic = {
+                name = "Sunday Comic",
+                text = {
+                    "Create a random {C:attention}Tag{}",
+                    "when {C:attention}Small Blind{} is selected"
+                }
             }
         },
         Other = {},
@@ -86,6 +93,7 @@ return {
             j_o_y_you_lose = "You Lose!",
             j_o_y_flushed = "Flushed!",
             j_o_y_used_up = "Used Up!",
+            j_o_y_plus_tag = "+1 Tag"
         },
         high_scores = {},
         labels = {},

@@ -32,6 +32,7 @@ load {
         "jimbazzaro",
         "sprue",
         "crit_chance_item",
+        "sunday_comic",
 
         -- Uncommon Jokers
         "down_the_drain",
