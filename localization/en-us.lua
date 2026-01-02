@@ -68,7 +68,8 @@ return {
         challenge_names = {},
         collabs = {},
         dictionary = {
-          k_you_lose = "You Lose!"
+            j_o_y_you_lose = "You Lose!",
+            j_o_y_flushed = "Flushed!"
         },
         high_scores = {},
         labels = {},
