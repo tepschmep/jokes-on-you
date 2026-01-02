@@ -31,6 +31,7 @@ load {
         "command_tower",
         "jimbazzaro",
         "sprue",
+        "crit_chance_item",
 
         -- Uncommon Jokers
         "down_the_drain",

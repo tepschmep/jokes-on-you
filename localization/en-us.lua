@@ -33,7 +33,7 @@ return {
                 name = "Down the Drain",
                 text = {
                     "{C:red}+#1#{} discard this round if",
-                    "{C:attention}discarded{} hand contains a {C:attention}Flush{}"
+                    "discarded hand contains a {C:attention}Flush{}"
                 }
             },
             j_o_y_command_tower = {
@@ -57,6 +57,14 @@ return {
                 text = {
                     "Increase the rank of the next",
                     "{C:attention}#1# numbered{} cards scored by {C:attention}#2#{}"
+                }
+            },
+            j_o_y_crit_chance_item = {
+                name = "Crit Chance Item",
+                text = {
+                    "{C:green}#2# in #3#{} chance for",
+                    "played cards to give",
+                    "{X:mult,C:white}X#1#{} Mult when scored"
                 }
             }
         },
