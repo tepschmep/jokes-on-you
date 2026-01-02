@@ -51,6 +51,13 @@ return {
                     "{C:red,E:2}Die{} in {C:attention,s:1.11}#3#{} hands",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
                 }
+            },
+            j_o_y_sprue = {
+                name = "Sprue",
+                text = {
+                    "Increase the rank of the next",
+                    "{C:attention}#1# numbered{} cards scored by {C:attention}#2#{}"
+                }
             }
         },
         Other = {},
@@ -69,7 +76,8 @@ return {
         collabs = {},
         dictionary = {
             j_o_y_you_lose = "You Lose!",
-            j_o_y_flushed = "Flushed!"
+            j_o_y_flushed = "Flushed!",
+            j_o_y_used_up = "Used Up!",
         },
         high_scores = {},
         labels = {},

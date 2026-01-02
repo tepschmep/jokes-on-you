@@ -30,6 +30,7 @@ load {
         -- Common Jokers
         "command_tower",
         "jimbazzaro",
+        "sprue",
 
         -- Uncommon Jokers
         "down_the_drain",
