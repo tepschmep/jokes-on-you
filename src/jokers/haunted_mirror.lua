@@ -59,8 +59,8 @@ haunted_mirror.calculate = function(self, card, context)
         if ret then
             -- ! this approach does not work with retrigger-based jokers
             -- TODO find a way to allow retriggers for both procs
-            SMODS.calculate_effect(ret, joker, true)
-            SMODS.calculate_effect(ret, joker, true)
+            SMODS.calculate_effect(ret, joker)
+            return ret
         end
     end
 end
