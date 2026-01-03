@@ -37,6 +37,7 @@ load {
         "trivia_card",
 
         -- Uncommon Jokers
+        "barbeque",
         "down_the_drain",
         "silly_band",
         "macaroni_art",

@@ -113,7 +113,7 @@ return {
                     "{C:attention}+#1#{} hand size",
                     "this round if scored hand",
                     "contains a {C:attention}Wild Card{}",
-                    "{C:inactive}(Currently {C:attention}+#2#{C:inactive} hand size"
+                    "{C:inactive}(Currently {C:attention}+#2#{C:inactive} hand size)"
                 }
             },
             j_o_y_trivia_card = {
@@ -121,6 +121,15 @@ return {
                 text = {
                     "All {C:tarot}Wheel of Fortune{} cards",
                     "in the shop are {C:attention}free{}"
+                }
+            },
+            j_o_y_barbeque = {
+                name = "Barbeque",
+                text = {
+                    "{C:green}#1# in #2#{} cards are",
+                    "drawn {C:attention}face down{}",
+                    "{C:attention}Face down{} cards give",
+                    "{X:mult,C:white}X#3#{} Mult when scored"
                 }
             }
         },
