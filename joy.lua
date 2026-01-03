@@ -43,7 +43,7 @@ load {
         "wild_draw_4",
 
         -- Rare Jokers
-        "haunted_mirror",
+        -- "haunted_mirror", --> Temporarily disabled due to instability
         "immortal_snail",
         "jimbo_in_your_face",
         "paddleball"
