@@ -37,3 +37,14 @@ command_tower.calculate = function(self, card, context)
 
     if valid_round_end and at_each_wilcard then return { dollars = config.payout } end
 end
+
+command_tower.in_pool = function(self, args)
+    local has_wild = false
+    for _, playing_card in ipairs(G.playing_cards or {}) do
+        if SMODS.has_enhancement(playing_card, 'm_wild') then
+            has_wild = true
+            break
+        end
+    end
+    return has_wild
+end

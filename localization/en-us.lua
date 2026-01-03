@@ -10,7 +10,7 @@ return {
                 text = {
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
                     "per {C:green}Reroll{} in the last shop",
-                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_o_y_jimbazzaro = {
@@ -49,7 +49,7 @@ return {
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
                     "per played hand",
                     "{C:red,E:2}Die{} in {C:attention,s:1.11}#3#{} hands",
-                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_o_y_sprue = {
@@ -104,15 +104,16 @@ return {
                 text = {
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
                     "per copy of itself",
-                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_o_y_wild_draw_4 = {
                 name = "Wild Draw 4",
                 text = {
                     "{C:attention}+#1#{} hand size",
-                    "this round when a",
-                    "{C:attention}Wild Card{} is scored"
+                    "this round if scored hand",
+                    "contains a {C:attention}Wild Card{}",
+                    "{C:inactive}(Currently {C:attention}+#2#{C:inactive} hand size"
                 }
             },
             j_o_y_trivia_card = {
