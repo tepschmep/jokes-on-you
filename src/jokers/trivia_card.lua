@@ -8,11 +8,16 @@ local trivia_card = SMODS.Joker {
     unlocked = true,
     discovered = false,
     rarity = 1, -- Common
-    cost = 2,
+    cost = 1,
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true
 }
+
+trivia_card.loc_vars = function(self, info_queue, card)
+    table.insert(info_queue, G.P_CENTERS.c_wheel_of_fortune) -- Wildcard tooltip
+    return {vars = {} }
+end
 
 trivia_card.add_to_deck = function(self, card, from_debuff)
     G.E_MANAGER:add_event(Event({
