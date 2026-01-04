@@ -34,6 +34,7 @@ load {
         "crit_chance_item",
         "sunday_comic",
         "trivia_card",
+        "mini",
 
         -- Uncommon Jokers
         "barbeque",

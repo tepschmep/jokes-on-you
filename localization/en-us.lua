@@ -131,6 +131,14 @@ return {
                     "{C:attention}Face down{} cards give",
                     "{X:mult,C:white}X#3#{} Mult when scored"
                 }
+            },
+            j_o_y_mini = {
+                name = "Mini",
+                text = {
+                    "{C:chips}+#2#{} Chips per card discarded",
+                    "{C:chips}-#3#{} Chips per card scored",
+                    "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)"
+                }
             }
         },
         Other = {},
