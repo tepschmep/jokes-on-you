@@ -83,3 +83,8 @@ immortal_snail.calculate = function(self, card, context)
         return ret
     end
 end
+
+immortal_snail.in_pool = function(self, args)
+    local pull = args.source
+    return args and (pull == "sho" or pull == "buf" or pull == "rta")
+end

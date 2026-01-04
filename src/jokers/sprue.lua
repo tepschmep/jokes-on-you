@@ -37,7 +37,7 @@ sprue.calculate = function(self, card, context)
         -- activates for numbered cards in scoring hand
         for k, v in pairs(context.scoring_hand) do
             if config.cards_left > 0 then
-                        if v:get_id() < 11 then
+                        if v:get_id() < 11 and v:get_id() > 1 then
 
                             if not context.blueprint then
                                 config.cards_left = config.cards_left - 1
@@ -70,6 +70,16 @@ sprue.calculate = function(self, card, context)
                                     return true
                                 end
                             }))
+
+                            if config.cards_left > 0 and not context.blueprint then
+                                card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil,
+                                    { message = localize {
+                                        type = "variable",
+                                        key = "a_remaining",
+                                        vars = { config.cards_left }
+                                    }
+                                })
+                            end
 
                             if config.cards_left < 1 and not context.blueprint then
                                 SMODS.destroy_cards(card, nil, nil, true)

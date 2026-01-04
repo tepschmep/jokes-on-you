@@ -11,7 +11,7 @@ local jimbazzaro = SMODS.Joker {
     },
     unlocked = true,
     discovered = false,
-    rarity = 1, -- Common
+    rarity = 2, -- Uncommon
     cost = 4,
     blueprint_compat = true,
     eternal_compat = true,

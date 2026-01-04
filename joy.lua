@@ -30,7 +30,6 @@ load {
         -- Common Jokers
         "command_tower",
         "foam_finger",
-        "jimbazzaro",
         "sprue",
         "crit_chance_item",
         "sunday_comic",
@@ -42,6 +41,7 @@ load {
         "silly_band",
         "macaroni_art",
         "wild_draw_4",
+        "jimbazzaro",
 
         -- Rare Jokers
         -- "haunted_mirror", --> Temporarily disabled due to instability
