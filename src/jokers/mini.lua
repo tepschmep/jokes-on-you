@@ -27,8 +27,6 @@ local mini = SMODS.Joker {
 		end,
 
 		calculate = function(self, card, context)
-				--TODO: up the speed of discarding to match Ramen
-
 				local ex = card.ability.extra
 
 				if context.discard and not context.blueprint then
@@ -36,6 +34,7 @@ local mini = SMODS.Joker {
 						return {
 								message = localize { type = "variable", key = "a_chips", vars = { ex.plus } },
 								colour = G.C.CHIPS,
+								delay = 0.2
 						}
 				end
 
