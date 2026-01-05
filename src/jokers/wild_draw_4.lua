@@ -57,19 +57,23 @@ wild_draw_4.calculate = function(self, card, context)
 
     if context.individual and context.cardarea == G.play and SMODS.has_enhancement(context.other_card, "m_wild") and not context.blueprint then
 
+      config.current_bonus = config.current_bonus + config.hand_size
+      G.hand:change_size(config.hand_size)
+
       return {
-          func = function()
-              G.E_MANAGER:add_event(Event({
-                  func = function()
-                      config.current_bonus = config.current_bonus + config.hand_size
-                      G.hand:change_size(config.hand_size)
-        
-                      return true
-                  end
-              }))
-          end,
+        -- swap out above line for below similar line if we're okay with having the hand size calculations happening during scoring instead of before like everything else in the game
+--          func = function()
+--              G.E_MANAGER:add_event(Event({
+--                  func = function()
+--                      config.current_bonus = config.current_bonus + config.hand_size
+--                      G.hand:change_size(config.hand_size)
+--        
+--                      return true
+--                  end
+--              }))
+--          end,
           message = localize { type = "variable", key = "a_handsize", vars = { config.hand_size } },
-          card = card
+          message_card = card
         }
     end
 
