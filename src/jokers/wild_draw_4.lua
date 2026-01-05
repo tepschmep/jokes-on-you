@@ -15,7 +15,7 @@ SMODS.Joker
     perishable_compat = true,
 
     -------------------------
-    
+
     config = {
         extra = {
             hand_size = 1,
@@ -50,7 +50,7 @@ SMODS.Joker
 --                    func = function()
 --                        config.current_bonus = config.current_bonus + config.hand_size
 --                        G.hand:change_size(config.hand_size)
---        
+--
 --                        return true
 --                    end
 --                })
@@ -64,7 +64,7 @@ SMODS.Joker
             local lost_size = config.current_bonus
             G.hand:change_size(-config.current_bonus)
             config.current_bonus = 0
-        
+
             if lost_size > 0 then
                 return { message = localize "k_reset" }
             end
@@ -78,7 +78,7 @@ SMODS.Joker
 
     in_pool = function(self, args)
         local has_wild = false
- 
+
         for _, playing_card in ipairs(G.playing_cards or {}) do
             if SMODS.has_enhancement(playing_card, "m_wild") then
                 has_wild = true

@@ -33,7 +33,7 @@ SMODS.Joker
             }
         }
     end,
-    
+
     calculate = function(self, card, context)
         local config = card.ability.extra
 

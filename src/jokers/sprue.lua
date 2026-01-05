@@ -39,7 +39,7 @@ SMODS.Joker
 
         -- occurs after all cards scored
         if context.after and not context.blueprint then
-        
+
             -- activates for numbered cards in scoring hand
             for _, played_card in pairs(context.scoring_hand) do
                 if config.cards_left > 0 and played_card:get_id() < 11 and played_card:get_id() > 1 then
@@ -82,7 +82,7 @@ SMODS.Joker
                             'extra',
                             nil,
                             nil,
-                            nil, 
+                            nil,
                             { message = localize { type = "variable", key = "a_remaining", vars = { config.cards_left } } }
                         )
                     end

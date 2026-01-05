@@ -29,7 +29,7 @@ SMODS.Joker
             vars = { config.tag_amount }
         }
     end,
-    
+
     calculate = function(self, card, context)
         local config = card.ability.extra
 
