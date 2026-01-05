@@ -70,7 +70,7 @@ return {
             j_o_y_sunday_comic = {
                 name = "Sunday Comic",
                 text = {
-                    "Create a random {C:attention}Tag{}",
+                    "Create {C:attention}#1#{} random {C:attention}Tags{}",
                     "when {C:attention}Small Blind{} is selected"
                 }
             },
@@ -104,6 +104,7 @@ return {
                 text = {
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
                     "per copy of itself",
+                    "Can appear multiple times",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
@@ -118,8 +119,9 @@ return {
             j_o_y_trivia_card = {
                 name = "Trivia Card",
                 text = {
-                    "All {C:tarot}Wheel of Fortune{} cards",
-                    "in the shop are {C:attention}free{}"
+                    "Create a {C:tarot}Wheel of Fortune{}",
+                    "when {C:attention}Boss Blind{} is selected",
+                    "{C:inactive}(Must have room)"
                 }
             },
             j_o_y_barbeque = {
@@ -158,7 +160,7 @@ return {
             j_o_y_you_lose = "You Lose!",
             j_o_y_flushed = "Flushed!",
             j_o_y_used_up = "Used Up!",
-            j_o_y_plus_tag = "+1 Tag"
+            j_o_y_wheel = "Wheel!"
         },
         high_scores = {},
         labels = {},
@@ -169,7 +171,9 @@ return {
         suits_plural = {},
         suits_singular = {},
         tutorial = {},
-        v_dictionary = {},
+        v_dictionary = {
+            v_j_o_y_plus_tag = "+#1# Tags"
+        },
         v_text = {}
     },
 }

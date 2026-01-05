@@ -16,7 +16,7 @@ local command_tower = SMODS.Joker {
 
 command_tower.config = {
     extra = {
-        payout = 4
+        payout = 6
     }
 }
 

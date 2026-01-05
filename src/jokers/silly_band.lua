@@ -11,13 +11,18 @@ local silly_band = SMODS.Joker {
     cost = 6,
     blueprint_compat = false,
     eternal_compat = true,
-    perishable_compat = true
+    perishable_compat = true,
+    in_pool = function(self, args)
+        return true,
+        { allow_duplicates = next(SMODS.find_card("j_o_y_silly_band")) }
+    end
+    
 }
 
 silly_band.config = {
     extra = {
-        xmult = 1,
-        xmult_per_copy = 1
+        xmult = 1.5,
+        xmult_per_copy = 1.5
     }
 }
 

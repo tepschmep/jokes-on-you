@@ -32,7 +32,7 @@ end
 crit_chance_item.calculate = function(self, card, context)
     local config = card.ability.extra
 		
-		if context.individual and context.cardarea == G.play and pseudorandom('crit_chance_upgrade') < G.GAME.probabilities.normal / config.odds then
+		if context.individual and context.cardarea == G.play and pseudorandom('j_o_y_crit_chance_upgrade') < G.GAME.probabilities.normal / config.odds then
 				return {xmult = config.xmult}
 		end
 end

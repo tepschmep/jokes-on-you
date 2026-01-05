@@ -7,8 +7,8 @@ local down_the_drain = SMODS.Joker {
     },
     unlocked = true,
     discovered = false,
-    rarity = 2, -- Uncommon
-    cost = 6,
+    rarity = 1, -- Common
+    cost = 4,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true
