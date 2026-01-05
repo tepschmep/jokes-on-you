@@ -33,24 +33,44 @@ end
 wild_draw_4.calculate = function(self, card, context)
     local config = card.ability.extra
 
-    if context.before and context.scoring_hand and not context.blueprint then
-        local has_wildcard = false
+-- old code used for an old effect, keeping it here in case we wanna go back to it
 
-        for _, scored_card in ipairs(context.scoring_hand) do
-            if SMODS.has_enhancement(scored_card, 'm_wild') and not scored_card.debuff then
-                has_wildcard = true
-                break
-            end
-        end
+--    if context.before and context.scoring_hand and not context.blueprint then
+--        local has_wildcard = false
+--
+--        for _, scored_card in ipairs(context.scoring_hand) do
+--            if SMODS.has_enhancement(scored_card, 'm_wild') and not scored_card.debuff then
+--                has_wildcard = true
+--                break
+--            end
+--        end
+--
+--        if has_wildcard then
+--            config.current_bonus = config.current_bonus + config.hand_size
+--            G.hand:change_size(config.hand_size)
+--
+--            return {
+--                message = localize { type = "variable", key = "a_handsize", vars = { config.hand_size } }
+--            }
+--        end
+--    end
 
-        if has_wildcard then
-            config.current_bonus = config.current_bonus + config.hand_size
-            G.hand:change_size(config.hand_size)
+    if context.individual and context.cardarea == G.play and SMODS.has_enhancement(context.other_card, "m_wild") and not context.blueprint then
 
-            return {
-                message = localize { type = "variable", key = "a_handsize", vars = { config.hand_size } }
-            }
-        end
+      return {
+          func = function()
+              G.E_MANAGER:add_event(Event({
+                  func = function()
+                      config.current_bonus = config.current_bonus + config.hand_size
+                      G.hand:change_size(config.hand_size)
+        
+                      return true
+                  end
+              }))
+          end,
+          message = localize { type = "variable", key = "a_handsize", vars = { config.hand_size } },
+          card = card
+        }
     end
 
     if context.end_of_round and not context.game_over and context.main_eval and not context.blueprint then

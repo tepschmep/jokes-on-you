@@ -110,9 +110,8 @@ return {
             j_o_y_wild_draw_4 = {
                 name = "Wild Draw 4",
                 text = {
-                    "{C:attention}+#1#{} hand size",
-                    "this round if scored hand",
-                    "contains a {C:attention}Wild Card{}",
+                    "This Joker gains {C:attention}+#1#{} hand size",
+                    "per {C:attention}Wild Card{} scored this round",
                     "{C:inactive}(Currently {C:attention}+#2#{C:inactive} hand size)"
                 }
             },

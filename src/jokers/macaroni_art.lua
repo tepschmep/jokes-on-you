@@ -34,7 +34,7 @@ macaroni_art.calculate = function(self, card, context)
     local at_single_played_card = context.individual and context.cardarea == G.play and #context.scoring_hand == 1
 
     if at_single_played_card then
-        local is_numbered_diamond = context.other_card:get_id() < 11 and context.other_card:is_suit("Diamonds")
+        local is_numbered_diamond = context.other_card:get_id() < 11 and context.other_card:get_id() > 1 and context.other_card:is_suit("Diamonds")
 
         if is_numbered_diamond then return { xmult = config.xmult } end
     end
