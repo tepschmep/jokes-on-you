@@ -27,6 +27,8 @@ load {
         py = 95
     },
     filenames = {
+        -- Page 1
+
         -- Common Jokers
         "command_tower",
         "foam_finger",
@@ -34,20 +36,32 @@ load {
         "crit_chance_item",
         "sunday_comic",
         "trivia_card",
-        "mini",
+        "down_the_drain",
 
         -- Uncommon Jokers
         "barbeque",
-        "down_the_drain",
         "silly_band",
         "macaroni_art",
         "wild_draw_4",
-        "jimbazzaro",
+        "jimbo_in_your_face",
 
         -- Rare Jokers
-        -- "haunted_mirror", --> Temporarily disabled due to instability
         "immortal_snail",
-        "jimbo_in_your_face",
-        "paddleball"
+        "paddleball",
+        "jimbazzaro",
+
+        -- Page 2
+
+        -- Common Jokers
+        "mini",
+
+        --Uncommon Jokers
+        "trick_or_treater",
+
+        --Rare Jokers
+
+        --Disabled content
+         -- "haunted_mirror", --> Temporarily disabled due to instability
+
     }
 }

@@ -140,6 +140,15 @@ return {
                     "{C:chips}-#3#{} Chips per card scored",
                     "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)"
                 }
+            },
+            j_o_y_trick_or_treater = {
+                name = "Trick-or-Treater",
+                text = {
+                    "Gains {C:mult}+#1#{} Mult and",
+                    "{C:attention}takes {C:money}$#2#{} when a",
+                    "{C:attention}face{} card is scored",
+                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
+                }
             }
         },
         Other = {},

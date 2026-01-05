@@ -8,7 +8,7 @@ SMODS.Joker
     },
     unlocked = true,
     discovered = false,
-    rarity = 3, -- Rare
+    rarity = 2, -- Uncommon
     cost = 8,
     blueprint_compat = true,
     eternal_compat = true,
@@ -33,6 +33,6 @@ SMODS.Joker
     calculate = function(self, card, context)
         local config = card.ability.extra
 
-	if context.joker_main then return { mult = config.mult } end
+				if context.joker_main then return { mult = config.mult } end
     end
 }

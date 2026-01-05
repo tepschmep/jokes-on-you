@@ -12,7 +12,7 @@ SMODS.Joker
     },
     unlocked = true,
     discovered = false,
-    rarity = 2, -- Uncommon
+    rarity = 3, -- Rare
     cost = 6,
     blueprint_compat = true,
     eternal_compat = true,
