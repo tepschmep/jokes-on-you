@@ -104,7 +104,7 @@ return {
                 text = {
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
                     "per copy of itself",
-                    "Can appear multiple times",
+                    "{s:0.8}Can appear multiple times",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
