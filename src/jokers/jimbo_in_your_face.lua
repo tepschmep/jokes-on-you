@@ -1,4 +1,5 @@
-local jimbo_in_your_face = SMODS.Joker {
+SMODS.Joker
+{
     key = "jimbo_in_your_face",
     atlas = "jokers",
     pos = {
@@ -11,25 +12,27 @@ local jimbo_in_your_face = SMODS.Joker {
     cost = 8,
     blueprint_compat = true,
     eternal_compat = true,
-    perishable_compat = true
-}
+    perishable_compat = true,
 
-jimbo_in_your_face.config = {
-    extra = {
-        mult = 40
-    }
-}
+    -------------------------
 
-jimbo_in_your_face.loc_vars = function(self, info_queue, card)
-    local config = card.ability.extra
+    config = {
+        extra = {
+            mult = 40
+        }
+    },
 
-    return {
-        vars = { config.mult }
-    }
-end
+    loc_vars = function(self, info_queue, card)
+        local config = card.ability.extra
 
-jimbo_in_your_face.calculate = function(self, card, context)
-    local config = card.ability.extra
+        return {
+            vars = { config.mult }
+        }
+    end,
+
+    calculate = function(self, card, context)
+        local config = card.ability.extra
 
 	if context.joker_main then return { mult = config.mult } end
-end
+    end
+}

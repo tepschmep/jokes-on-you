@@ -1,4 +1,5 @@
-local down_the_drain = SMODS.Joker {
+SMODS.Joker
+{
     key = "down_the_drain",
     atlas = "jokers",
     pos = {
@@ -11,34 +12,36 @@ local down_the_drain = SMODS.Joker {
     cost = 4,
     blueprint_compat = true,
     eternal_compat = true,
-    perishable_compat = true
-}
+    perishable_compat = true,
 
-down_the_drain.config = {
-    extra = {
-        discards = 1
-    }
-}
+    -------------------------
 
-down_the_drain.loc_vars = function(self, info_queue, card)
-    local config = card.ability.extra
+    config = {
+        extra = {
+            discards = 1
+        }
+    },
 
-    return {
-        vars = { config.discards }
-    }
-end
+    loc_vars = function(self, info_queue, card)
+        local config = card.ability.extra
 
-down_the_drain.calculate = function(self, card, context)
-    if context.pre_discard then
-        local _, _, poker_hands = G.FUNCS.get_poker_hand_info(G.hand.highlighted)
+        return {
+            vars = { config.discards }
+        }
+    end,
 
-        if next(poker_hands["Flush"]) then
-            ease_discard(card.ability.extra.discards)
+    calculate = function(self, card, context)
+        if context.pre_discard then
+            local _, _, poker_hands = G.FUNCS.get_poker_hand_info(G.hand.highlighted)
 
-            return {
-                message = localize "j_o_y_flushed",
-                colour = G.C.BLUE
-            }
+            if next(poker_hands["Flush"]) then
+                ease_discard(card.ability.extra.discards)
+
+                return {
+                    message = localize "j_o_y_flushed",
+                    colour = G.C.BLUE
+                }
+            end
         end
     end
-end
+}

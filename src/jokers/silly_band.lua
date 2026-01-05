@@ -1,4 +1,5 @@
-local silly_band = SMODS.Joker {
+SMODS.Joker
+{
     key = "silly_band",
     atlas = "jokers",
     pos = {
@@ -12,45 +13,46 @@ local silly_band = SMODS.Joker {
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
-    in_pool = function(self, args)
-        return true,
-        { allow_duplicates = next(SMODS.find_card("j_o_y_silly_band")) }
-    end
-    
-}
 
-silly_band.config = {
-    extra = {
-        xmult = 1.5,
-        xmult_per_copy = 1.5
-    }
-}
+    -------------------------
 
-silly_band.loc_vars = function(self, info_queue, card)
-    local config = card.ability.extra
-
-    return {
-        vars = {
-            config.xmult_per_copy,
-            config.xmult
+    config = {
+        extra = {
+            xmult = 1.5,
+            xmult_per_copy = 1.5
         }
-    }
-end
+    },
 
-silly_band.calculate = function(self, card, context)
-    local config = card.ability.extra
+    loc_vars = function(self, info_queue, card)
+        local config = card.ability.extra
 
-    if G.jokers then
-        local copy_count = 0
+        return {
+            vars = {
+                config.xmult_per_copy,
+                config.xmult
+            }
+        }
+    end,
+    
+    calculate = function(self, card, context)
+        local config = card.ability.extra
 
-        for _, joker in ipairs(G.jokers.cards) do
-            if joker.label == card.label then
-                copy_count = copy_count + 1
+        if G.jokers then
+            local copy_count = 0
+
+            for _, joker in ipairs(G.jokers.cards) do
+                if joker.label == card.label then
+                    copy_count = copy_count + 1
+                end
             end
+
+            config.xmult = config.xmult_per_copy * copy_count
         end
 
-        config.xmult = config.xmult_per_copy * copy_count
-    end
+        if context.joker_main then return { xmult = config.xmult } end
+    end,
 
-    if context.joker_main then return { xmult = config.xmult } end
-end
+    in_pool = function(self, args)
+        return true, { allow_duplicates = next(SMODS.find_card("j_o_y_silly_band")) }
+    end
+}

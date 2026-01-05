@@ -1,4 +1,5 @@
-local foam_finger = SMODS.Joker {
+SMODS.Joker
+{
     key = "foam_finger",
     atlas = "jokers",
     pos = {
@@ -11,31 +12,33 @@ local foam_finger = SMODS.Joker {
     cost = 6,
     blueprint_compat = false,
     eternal_compat = true,
-    perishable_compat = true
+    perishable_compat = true,
+
+    -------------------------
+
+    config = {
+        extra = {
+            hands = 1
+        }
+    },
+
+    loc_vars = function(self, info_queue, card)
+        local config = card.ability.extra
+
+        return {
+            vars = { config.hands }
+        }
+    end,
+
+    add_to_deck = function(self, card, from_debuff)
+        local config = card.ability.extra
+
+        G.GAME.round_resets.hands = G.GAME.round_resets.hands + config.hands
+    end,
+
+    remove_from_deck = function(self, card, from_debuff)
+        local config = card.ability.extra
+
+        G.GAME.round_resets.hands = G.GAME.round_resets.hands - config.hands
+    end
 }
-
-foam_finger.config = {
-    extra = {
-        hands = 1
-    }
-}
-
-foam_finger.loc_vars = function(self, info_queue, card)
-    local config = card.ability.extra
-
-    return {
-        vars = { config.hands }
-    }
-end
-
-foam_finger.add_to_deck = function(self, card, from_debuff)
-    local config = card.ability.extra
-
-    G.GAME.round_resets.hands = G.GAME.round_resets.hands + config.hands
-end
-
-foam_finger.remove_from_deck = function(self, card, from_debuff)
-    local config = card.ability.extra
-
-    G.GAME.round_resets.hands = G.GAME.round_resets.hands - config.hands
-end

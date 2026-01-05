@@ -1,4 +1,5 @@
-local trivia_card = SMODS.Joker {
+SMODS.Joker
+{
     key = "trivia_card",
     atlas = "jokers",
     pos = {
@@ -13,30 +14,39 @@ local trivia_card = SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
 
+    -------------------------
+
     loc_vars = function(self, info_queue, card)
-        table.insert(info_queue, G.P_CENTERS.c_wheel_of_fortune) -- Wildcard tooltip
-        return {vars = {} }
+        table.insert(info_queue, G.P_CENTERS.c_wheel_of_fortune) -- Wheel of Fortune tooltip
+        return { vars = {} }
     end,
 
     calculate = function(self, card, context)
-        if context.setting_blind and G.GAME.blind:get_type() == 'Boss' then
+        if context.setting_blind and G.GAME.blind:get_type() == "Boss" then
             if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
                 G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
 
-                G.E_MANAGER:add_event(Event({
-                    func = (function()
-                        G.E_MANAGER:add_event(Event({
+                G.E_MANAGER:add_event(Event {
+                    func = function()
+                        G.E_MANAGER:add_event(Event {
                             func = function()
-                                SMODS.add_card{key = 'c_wheel_of_fortune'}
+                                SMODS.add_card { key = "c_wheel_of_fortune" }
                                 G.GAME.consumeable_buffer = 0
                                 return true
                             end
-                        }))
-                        SMODS.calculate_effect({message = localize('j_o_y_wheel'), colour = G.C.PURPLE}, context.blueprint_card or card)
-                        return true
-                    end)
-                }))
+                        })
 
+                        SMODS.calculate_effect(
+                            {
+                                message = localize "j_o_y_wheel",
+                                colour = G.C.PURPLE
+                            },
+                            context.blueprint_card or card
+                        )
+
+                        return true
+                    end
+                })
             end
         end
     end
