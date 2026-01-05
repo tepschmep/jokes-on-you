@@ -59,7 +59,8 @@ load {
         "trick_or_treater",
 
         --Rare Jokers
-
+        "jokerman",
+        
         --Disabled content
          -- "haunted_mirror", --> Temporarily disabled due to instability
 

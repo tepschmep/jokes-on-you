@@ -149,6 +149,14 @@ return {
                     "{C:attention}face{} card is scored",
                     "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
                 }
+            },
+            j_o_y_jokerman = {
+                name = "Jokerman",
+                text = {
+                    "This Joker gains {X:mult,C:white}X#1#{} Mult",
+                    "per card with an {C:attention}Edition{} in full deck",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+                }
             }
         },
         Other = {},
