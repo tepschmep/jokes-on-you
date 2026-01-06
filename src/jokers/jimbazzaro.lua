@@ -13,7 +13,7 @@ SMODS.Joker
     unlocked = true,
     discovered = false,
     rarity = 3, -- Rare
-    cost = 6,
+    cost = 8,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,

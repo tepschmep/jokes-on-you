@@ -157,6 +157,13 @@ return {
                     "per card with an {C:attention}Edition{} in full deck",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
+            },
+            j_o_y_pngjoker = {
+                name = "PNGJoker",
+                text = {
+                    "{C:mult}+#1#{} Mult if this is",
+                    "your rightmost Joker"
+                }
             }
         },
         Other = {},

@@ -54,6 +54,7 @@ load {
 
         -- Common Jokers
         "mini",
+        "pngjoker",
 
         --Uncommon Jokers
         "trick_or_treater",
