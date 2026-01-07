@@ -46,8 +46,19 @@ SMODS.Joker
 				end
 
 				if context.end_of_round and not context.blueprint and not context.game_over and context.main_eval and SMODS.pseudorandom_probability(card, "j_o_y_heads_or_tails", config.numerator, config.denominator) then
-						if G.GAME.dollars ~= 0 then
-								return { dollars = -G.GAME.dollars + config.money_set }
+						if G.GAME.dollars + (G.GAME.dollar_buffer or 0) ~= config.money_set then
+								G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) - G.GAME.dollars + config.money_set
+								return {
+										dollars = -G.GAME.dollars + config.money_set,
+										func = function()
+												G.E_MANAGER:add_event(Event({
+														func = function()
+																G.GAME.dollar_buffer = 0
+																return true
+														end
+												}))
+										end
+								}
 						end
 				end
     end

@@ -53,8 +53,8 @@ SMODS.Joker
                         delay = 0.15,
                         func = function()
                             play_sound "card1"
-                            v:flip()
-                            v:juice_up(0.3, 0.3)
+                            played_card:flip()
+                            played_card:juice_up(0.3, 0.3)
 
                             return true
                         end
@@ -66,11 +66,11 @@ SMODS.Joker
                         trigger = "after",
                         delay = 0.15,
                         func = function()
-                            assert(SMODS.modify_rank(v, config.rank_increment))
+                            assert(SMODS.modify_rank(played_card, config.rank_increment))
 
                             play_sound "tarot2"
-                            v:flip()
-                            v:juice_up(0.3, 0.3)
+                            played_card:flip()
+                            played_card:juice_up(0.3, 0.3)
 
                             return true
                         end

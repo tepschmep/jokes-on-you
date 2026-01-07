@@ -37,7 +37,20 @@ SMODS.Joker
         local valid_round_end = context.end_of_round and not context.game_over
         local at_each_wilcard = context.individual and context.cardarea == G.hand and SMODS.has_enhancement(context.other_card, 'm_wild')
 
-        if valid_round_end and at_each_wilcard then return { dollars = config.payout } end
+        if valid_round_end and at_each_wilcard then
+            G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) + config.payout
+            return {
+                dollars = config.payout,
+                func = function()
+                    G.E_MANAGER:add_event(Event({
+                        func = function()
+                            G.GAME.dollar_buffer = 0
+                            return true
+                        end
+                    }))
+                end
+            }
+        end
     end,
 
     in_pool = function(self, args)
