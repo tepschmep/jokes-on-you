@@ -164,6 +164,16 @@ return {
                     "{C:mult}+#1#{} Mult if this is",
                     "your rightmost Joker"
                 }
+            },
+            j_o_y_heads_or_tails = {
+               name = "Heads or Tails",
+               text = {
+                  "Sets the {C:attention}denominator{} of",
+                  "all {C:attention}listed {C:green}probabilities{} to {C:attention}#1#{}",
+                  "{C:green}#2# in #3#{} chance to lose",
+                  "{C:money}$#4#{} at end of round",
+                  "{C:inactive}(ex: {C:green}1 in 5{C:inactive} -> {C:green}1 in #1#{C:inactive})"
+                }
             }
         },
         Other = {},

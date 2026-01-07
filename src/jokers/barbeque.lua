@@ -18,7 +18,8 @@ SMODS.Joker
 
     config = {
         extra = {
-            odds = 4,
+            numerator = 1,
+            denominator = 4,
             xmult = 2,
             face_down_cards = {}
         }
@@ -26,13 +27,10 @@ SMODS.Joker
 
     loc_vars = function(self, info_queue, card)
         local config = card.ability.extra
+        local num, denom = SMODS.get_probability_vars(card, config.numerator, config.denominator)
 
         return {
-            vars = { -- "#1# in #2#" --> (probabilities.normal or 1) in (odds)
-                G.GAME.probabilities.normal or 1,
-                config.odds,
-                config.xmult
-            }
+            vars = { num, denom, config.xmult }
         }
     end,
 
@@ -40,9 +38,8 @@ SMODS.Joker
         local config = card.ability.extra
 
         local is_drawing_card = context.stay_flipped and context.to_area == G.hand
-        local proc = pseudorandom("barbeque") < G.GAME.probabilities.normal / config.odds
 
-        if not context.blueprint and is_drawing_card and proc then
+        if not context.blueprint and is_drawing_card and SMODS.pseudorandom_probability(card, "j_o_y_barbeque", config.numerator, config.denominator) then
             return { stay_flipped = true }
         end
 

@@ -61,6 +61,7 @@ load {
 
         --Rare Jokers
         "jokerman",
+        "heads_or_tails",
         
         --Disabled content
          -- "haunted_mirror", --> Temporarily disabled due to instability

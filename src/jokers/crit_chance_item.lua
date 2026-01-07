@@ -19,22 +19,24 @@ SMODS.Joker
     config = {
         extra = {
             xmult = 2,
-	    odds = 6
+						numerator = 1,
+						denominator = 6
         }
     },
 
     loc_vars = function(self, info_queue, card)
         local config = card.ability.extra
+				local num, denom = SMODS.get_probability_vars(card, config.numerator, config.denominator)
 
         return {
-            vars = { config.xmult, (G.GAME.probabilities.normal or 1), config.odds }
+            vars = { config.xmult, num, denom }
         }
     end,
 
     calculate = function(self, card, context)
         local config = card.ability.extra
 
-        if context.individual and context.cardarea == G.play and pseudorandom "j_o_y_crit_chance_upgrade" < G.GAME.probabilities.normal / config.odds then
+        if context.individual and context.cardarea == G.play and SMODS.pseudorandom_probability(card, "j_o_y_crit_chance_item", config.numerator, config.denominator) then
             return { xmult = config.xmult }
         end
     end
