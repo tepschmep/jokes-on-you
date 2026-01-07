@@ -14,7 +14,7 @@ SMODS.Joker
     discovered = false,
     rarity = 3, -- Rare
     cost = 9,
-    blueprint_compat = true,
+    blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
 
@@ -25,7 +25,7 @@ SMODS.Joker
             denom_mod = 2,
 						numerator = 1,
 						denominator = 2,
-						money_loss = 20
+						money_set = 25
         }
     },
 
@@ -34,7 +34,7 @@ SMODS.Joker
 				local num, denom = SMODS.get_probability_vars(card, config.numerator, config.denominator)
 
         return {
-            vars = { config.denom_mod, num, denom, config.money_loss }
+            vars = { config.denom_mod, num, denom, config.money_set }
         }
     end,
 
@@ -45,8 +45,10 @@ SMODS.Joker
 						return { denominator = config.denom_mod }
 				end
 
-				if context.end_of_round and not context.game_over and context.main_eval and SMODS.pseudorandom_probability(card, "j_o_y_heads_or_tails", config.numerator, config.denominator) then
-						return { dollars = -config.money_loss }
+				if context.end_of_round and not context.blueprint and not context.game_over and context.main_eval and SMODS.pseudorandom_probability(card, "j_o_y_heads_or_tails", config.numerator, config.denominator) then
+						if G.GAME.dollars ~= 0 then
+								return { dollars = -G.GAME.dollars + config.money_set }
+						end
 				end
     end
 }

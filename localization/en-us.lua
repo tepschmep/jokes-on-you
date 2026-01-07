@@ -170,8 +170,8 @@ return {
                text = {
                   "Sets the {C:attention}denominator{} of",
                   "all {C:attention}listed {C:green}probabilities{} to {C:attention}#1#{}",
-                  "{C:green}#2# in #3#{} chance to lose",
-                  "{C:money}$#4#{} at end of round",
+                  "{C:green}#2# in #3#{} chance to set money",
+                  "to {C:money}$#4#{} at end of round",
                   "{C:inactive}(ex: {C:green}1 in 5{C:inactive} -> {C:green}1 in #1#{C:inactive})"
                 }
             }
