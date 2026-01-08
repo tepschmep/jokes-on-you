@@ -6,6 +6,7 @@ SMODS.Joker
         x = 3,
         y = 2
     },
+    pixel_size = { h = 87 },
 	soul_pos = {
 		x = 4,
 		y = 2
@@ -14,7 +15,7 @@ SMODS.Joker
     discovered = false,
     rarity = 3, -- Rare
     cost = 9,
-    blueprint_compat = false,
+    blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
 
@@ -45,7 +46,7 @@ SMODS.Joker
 			return { denominator = config.denom_mod }
 		end
 
-		if context.end_of_round and not context.blueprint and not context.game_over and context.main_eval and SMODS.pseudorandom_probability(card, "j_o_y_heads_or_tails", config.numerator, config.denominator) then
+		if context.end_of_round and not context.game_over and context.main_eval and SMODS.pseudorandom_probability(card, "j_o_y_heads_or_tails", config.numerator, config.denominator) then
 			if G.GAME.dollars + (G.GAME.dollar_buffer or 0) ~= config.money_set then
 				G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) - G.GAME.dollars + config.money_set
 				return {

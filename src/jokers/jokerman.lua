@@ -52,5 +52,18 @@ SMODS.Joker
                 xmult = config.xmult + config.xmult_per_edition * edition_tally
             }
         end
+    end,
+
+    in_pool = function(self, args)
+        local has_edition = false
+
+        for _, playing_card in ipairs(G.playing_cards or {}) do
+            if playing_card.edition then
+                has_edition = true
+                break
+            end
+        end
+
+        return has_edition
     end
 }
