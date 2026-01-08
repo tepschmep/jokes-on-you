@@ -64,7 +64,7 @@ load {
         "heads_or_tails",
         
         --Disabled content
-         -- "haunted_mirror", --> Temporarily disabled due to instability
+        -- "haunted_mirror", --> Temporarily disabled due to instability
 
     }
 }

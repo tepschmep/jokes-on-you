@@ -33,6 +33,6 @@ SMODS.Joker
     calculate = function(self, card, context)
         local config = card.ability.extra
 
-				if context.joker_main then return { mult = config.mult } end
+		if context.joker_main then return { mult = config.mult } end
     end
 }

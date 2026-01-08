@@ -19,14 +19,14 @@ SMODS.Joker
     config = {
         extra = {
             xmult = 2,
-						numerator = 1,
-						denominator = 6
+			numerator = 1,
+			denominator = 6
         }
     },
 
     loc_vars = function(self, info_queue, card)
         local config = card.ability.extra
-				local num, denom = SMODS.get_probability_vars(card, config.numerator, config.denominator)
+		local num, denom = SMODS.get_probability_vars(card, config.numerator, config.denominator)
 
         return {
             vars = { config.xmult, num, denom }

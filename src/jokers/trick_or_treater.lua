@@ -19,8 +19,8 @@ SMODS.Joker
     config = {
         extra = {
             mult = 0,
-						mult_plus = 1,
-						money_loss = 1
+			mult_plus = 1,
+			money_loss = 1
         }
     },
 
@@ -35,31 +35,31 @@ SMODS.Joker
     calculate = function(self, card, context)
         local config = card.ability.extra
 
-				if context.individual and context.cardarea == G.play and context.other_card:is_face() and not context.blueprint then
-						config.mult = config.mult + config.mult_plus
+		if context.individual and context.cardarea == G.play and context.other_card:is_face() and not context.blueprint then
+			config.mult = config.mult + config.mult_plus
 
-						G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) - config.money_loss
-						return {
-								extra = {
-										message = localize { type = "variable", key = "a_mult", vars = { config.mult_plus } },
-										colour = G.C.MULT,
-										message_card = card
-								},
-								dollars = -config.money_loss,
-								message_card = card,
-								func = function()
-										G.E_MANAGER:add_event(Event({
-												func = function()
-														G.GAME.dollar_buffer = 0
-														return true
-												end
-										}))
-								end,
-						}
+			G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) - config.money_loss
+			return {
+				extra = {
+					message = localize { type = "variable", key = "a_mult", vars = { config.mult_plus } },
+					colour = G.C.MULT,
+					message_card = card
+				},
+				dollars = -config.money_loss,
+				message_card = card,
+				func = function()
+					G.E_MANAGER:add_event(Event({
+						func = function()
+							G.GAME.dollar_buffer = 0
+							return true
+						end
+					}))
+				end,
+			}
 
-				end
+		end
 
-				if context.joker_main then return { mult = config.mult } end
+		if context.joker_main then return { mult = config.mult } end
 
     end
 }

@@ -4,7 +4,7 @@ SMODS.Joker
     atlas = "jokers",
     pos = {
         x = 10,
-	y = 1
+	    y = 1
     },
     unlocked = true,
     discovered = false,
@@ -40,13 +40,13 @@ SMODS.Joker
         local ex = card.ability.extra
 
         if context.discard and not context.blueprint then
-                ex.chips = ex.chips + ex.plus
+            ex.chips = ex.chips + ex.plus
 
-            return {
-                message = localize { type = "variable", key = "a_chips", vars = { ex.plus } },
-               	colour = G.C.CHIPS,
-               	delay = 0.2
-            }
+        return {
+            message = localize { type = "variable", key = "a_chips", vars = { ex.plus } },
+            colour = G.C.CHIPS,
+        	delay = 0.2
+        }
         end
 
         if context.individual and context.cardarea == G.play and not context.blueprint and ex.chips > 0 then
