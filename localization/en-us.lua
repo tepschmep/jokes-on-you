@@ -32,8 +32,9 @@ return {
             j_o_y_down_the_drain = {
                 name = "Down the Drain",
                 text = {
-                    "{C:red}+#1#{} discard this round if",
-                    "discarded hand contains a {C:attention}Flush{}"
+                    "{C:red}+#1#{} discard this round",
+                    "if discarded hand",
+                    "contains a {C:attention}Flush{}"
                 }
             },
             j_o_y_command_tower = {
@@ -154,7 +155,8 @@ return {
                 name = "Jokerman",
                 text = {
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
-                    "per card with an {C:attention}Edition{} in full deck",
+                    "per card with an {C:attention}Edition{}",
+                    "in your {C:attention}full deck",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
@@ -173,6 +175,15 @@ return {
                   "{C:green}#2# in #3#{} chance to set money",
                   "to {C:money}$#4#{} at end of round",
                   "{C:inactive}(ex: {C:green}1 in 5{C:inactive} -> {C:green}1 in #1#{C:inactive})"
+                }
+            },
+            j_o_y_green_glass_door = {
+                name = "Green Glass Door",
+                text = {
+                    "Each played card gives",
+                    "{C:chips}+#1#{} Chips if it shares",
+                    "a {C:attention}rank{} with exactly",
+                    "{C:attention}#2#{} other played card"
                 }
             }
         },

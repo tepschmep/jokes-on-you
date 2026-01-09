@@ -6,6 +6,7 @@ SMODS.Joker
         x = 4,
         y = 1
     },
+    pixel_size = { w = 68, h = 92 },
     unlocked = true,
     discovered = false,
     rarity = 1, -- Uncommon
