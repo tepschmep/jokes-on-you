@@ -57,12 +57,10 @@ SMODS.Joker
         if G.j_o_y_last_sold_joker then
             local joker = context.blueprint and context.blueprint_copiers_stack[1] or card
             local ret = SMODS.blueprint_effect(joker, G.j_o_y_last_sold_joker, context)
+            local ret2 = SMODS.blueprint_effect(joker, G.j_o_y_last_sold_joker, context)
 
             if ret then
-                -- ! this approach does not work with retrigger-based jokers
-                -- TODO find a way to allow retriggers for both procs
-                SMODS.calculate_effect(ret, joker)
-                return ret
+                return SMODS.merge_effects{ ret, ret2 }
             end
         end
     end

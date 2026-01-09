@@ -35,7 +35,7 @@ SMODS.Joker
         if context.joker_main then
 
 			for i = 1, #G.jokers.cards do
-				if G.jokers.cards[i] == card then
+				if G.jokers.cards[i] == (card or context.blueprint_card) then
 					--print(i)
 					my_pos = i
 					break
