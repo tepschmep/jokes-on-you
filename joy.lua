@@ -1,3 +1,5 @@
+J_O_Y = {}
+
 local function load(arg)
     if type(arg) == "string" then
         assert(SMODS.load_file(arg))()
@@ -17,6 +19,20 @@ local function load(arg)
 
     error("undefined call")
 end
+
+SMODS.Atlas {
+    key = "modicon",
+    path = "mod_icon.png",
+    px = 32,
+    py = 32
+}
+
+load {
+    type = "utils",
+    filenames = {
+        "creation"
+    }
+}
 
 load {
     type = "jokers",
@@ -64,16 +80,9 @@ load {
         --Rare Jokers
         "jokerman",
         "heads_or_tails",
-        
+
         --Disabled content
         -- "haunted_mirror", --> Temporarily disabled due to instability
 
     }
 }
-
-SMODS.Atlas({
-    key = "modicon",
-    path = "mod_icon.png",
-    px = 32,
-    py = 32
-})
