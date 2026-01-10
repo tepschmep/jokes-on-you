@@ -185,6 +185,15 @@ return {
                     "a {C:attention}rank{} with exactly",
                     "{C:attention}#2#{} other played card"
                 }
+            },
+            j_o_y_search_and_find = {
+                name = "Search & Find",
+                text = {
+                    "Create a {C:tarot}Tarot{} card more",
+                    "per {C:attention}#1#{} of {V:1}#2#{} you score",
+                    "The card you need to find",
+                    "will change at end of {C:attention}Blind"
+                }
             }
         },
         Other = {},
