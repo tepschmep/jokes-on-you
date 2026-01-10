@@ -17,28 +17,16 @@ SMODS.Joker
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    
+
     -------------------------
 
     calculate = function(self, card, context)
-        if context.reroll_shop then
-
-            if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
-                G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
-                G.E_MANAGER:add_event(Event {
-                    func = function()
-                        SMODS.add_card { set = "Tarot" }
-                        G.GAME.consumeable_buffer = 0
-                        return true
-                    end
-                })
-
-                return {
-                    message = localize "k_plus_tarot",
-                    colour = G.C.PURPLE,
-                    card = card
-                }
-            end
+        if context.reroll_shop and J_O_Y.create_consumable { set = "Tarot" } then
+            return {
+                message = localize "k_plus_tarot",
+                colour = G.C.PURPLE,
+                card = card
+            }
         end
     end
 }

@@ -23,32 +23,22 @@ SMODS.Joker
     end,
 
     calculate = function(self, card, context)
-        if context.setting_blind and G.GAME.blind:get_type() == "Boss" then
-            if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
-                G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+        local is_boss_blind = context.setting_blind and G.GAME.blind:get_type() == "Boss"
 
-                G.E_MANAGER:add_event(Event {
-                    func = function()
-                        G.E_MANAGER:add_event(Event {
-                            func = function()
-                                SMODS.add_card { key = "c_wheel_of_fortune" }
-                                G.GAME.consumeable_buffer = 0
-                                return true
-                            end
-                        })
+        if is_boss_blind and J_O_Y.create_consumable { key = "c_wheel_of_fortune" } then
+            G.E_MANAGER:add_event(Event {
+                func = function()
+                    SMODS.calculate_effect(
+                        {
+                            message = localize "j_o_y_wheel",
+                            colour = G.C.PURPLE
+                        },
+                        context.blueprint_card or card
+                    )
 
-                        SMODS.calculate_effect(
-                            {
-                                message = localize "j_o_y_wheel",
-                                colour = G.C.PURPLE
-                            },
-                            context.blueprint_card or card
-                        )
-
-                        return true
-                    end
-                })
-            end
+                    return true
+                end
+            })
         end
     end
 }
