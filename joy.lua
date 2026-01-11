@@ -76,6 +76,7 @@ load {
         --Uncommon Jokers
         "trick_or_treater",
         "green_glass_door",
+        "scratch_art",
 
         --Rare Jokers
         "jokerman",

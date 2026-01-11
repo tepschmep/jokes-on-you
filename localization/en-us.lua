@@ -194,6 +194,13 @@ return {
                     "The card you need to find",
                     "will change at end of {C:attention}Blind"
                 }
+            },
+            j_o_y_scratch_art = {
+                name = "Scratch Art",
+                text = {
+                    "{C:dark_edition}Negative{} Jokers",
+                    "each give {X:mult,C:white}X#1#{} Mult"
+                }
             }
         },
         Other = {},
