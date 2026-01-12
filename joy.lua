@@ -72,6 +72,7 @@ load {
         "mini",
         "pngjoker",
         "search_and_find",
+        "stock_photo",
 
         --Uncommon Jokers
         "trick_or_treater",

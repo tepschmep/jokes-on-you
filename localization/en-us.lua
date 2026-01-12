@@ -201,6 +201,13 @@ return {
                     "{C:dark_edition}Negative{} Jokers",
                     "each give {X:mult,C:white}X#1#{} Mult"
                 }
+            },
+            j_o_y_stock_photo = {
+                name = "Stock Photo",
+                text = {
+                    "{C:common}Common{} Jokers",
+                    "each give {C:chips}+#1#{} Chips"
+                }
             }
         },
         Other = {},
