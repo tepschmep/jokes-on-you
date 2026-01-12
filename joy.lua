@@ -30,7 +30,8 @@ SMODS.Atlas {
 load {
     type = "utils",
     filenames = {
-        "creation"
+        "creation",
+        "random"
     }
 }
 
