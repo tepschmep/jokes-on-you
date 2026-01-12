@@ -12,14 +12,13 @@ J_O_Y.get_random_hand = function(arg)
     return hand
 end
 
--- (internal usage only) gets a random card property that abides by a specified predicate
+-- returns a table containing data related to the occurrences of a specified property in the deck
 --
--- weighted => should the quantity of occurrences of said property in deck to be accounted for?
--- prop_checker => check to see if the card can be counted as having that property
--- prop_getter => how to get that property from the card
--- prop_values => list of all values for said property
-local function _get_random_prop(arg)
+-- if weighted == true, returns a list with every occurrence, allowing duplicates
+-- else, returns a set with each unique occurrence
+local function _get_props_in_deck(arg)
     local props_in_deck = {}
+
     for _, card in ipairs(G.playing_cards) do
         if arg.weighted then
             if arg.prop_checker(card) then table.insert(props_in_deck, arg.prop_getter(card)) end
@@ -28,7 +27,29 @@ local function _get_random_prop(arg)
         end
     end
 
-    if arg.weighted and #props_in_deck == 0 then return nil end
+    return props_in_deck
+end
+
+-- (internal usage only) gets a random card property that abides by a specified predicate
+--
+-- weighted => should the quantity of occurrences of said property in deck to be accounted for?
+-- prop_checker => check to see if the card can be counted as having that property
+-- prop_getter => how to get that property from the card
+-- prop_values => list of all values for said property
+local function _get_random_prop(arg)
+    local props_in_deck = _get_props_in_deck {
+        weighted = arg.weighted,
+        prop_checker = arg.prop_checker,
+        prop_getter = arg.prop_getter
+    }
+
+    if arg.weighted and #props_in_deck == 0 then
+        props_in_deck = _get_props_in_deck {
+            weighted = false, -- disregard weighted
+            prop_checker = arg.prop_checker,
+            prop_getter = arg.prop_getter
+        }
+    end
 
     local prop
     repeat
