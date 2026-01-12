@@ -27,14 +27,12 @@ end
 -- Returns a list of all tags created.
 J_O_Y.create_tag = function(arg)
     local amount = arg and arg.amount or 1
+    local predicate = arg and arg.predicate or function () return true end
 
     local tags = {}
     local tag_key
     for i = 1, amount do
-        repeat
-            tag_key = get_next_tag_key()
-            local key_is_valid = arg and arg.predicate(tag_key) or true -- if there is no predicate, all keys are valid
-        until key_is_valid
+        repeat tag_key = get_next_tag_key() until predicate(tag_key)
 
         tags[i] = Tag(tag_key)
         add_tag(tags[i])
