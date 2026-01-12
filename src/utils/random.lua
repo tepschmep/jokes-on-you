@@ -49,6 +49,8 @@ local function _get_random_prop(arg)
             prop_checker = arg.prop_checker,
             prop_getter = arg.prop_getter
         }
+
+        arg.weighted = false
     end
 
     local prop
