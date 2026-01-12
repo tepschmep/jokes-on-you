@@ -39,7 +39,7 @@ SMODS.Joker
             J_O_Y.create_tag {
                 amount = config.tag_amount,
                 predicate = function(tag_key)
-                    return tag_key ~= "tag_boss" and tag_key ~= "tag_orbital"
+                    return tag_key ~= "tag_boss"
                 end
 			}
 
