@@ -208,6 +208,14 @@ return {
                     "{C:common}Common{} Jokers",
                     "each give {C:chips}+#1#{} Chips"
                 }
+            },
+            j_o_y_spectronomicon = {
+                name = "Spectronomicon",
+                text = {
+                    "Create a {C:spectral}Spectral{} Card",
+                    "when another Joker is {C:attention}sold",
+                    "{C:inactive}(Must have room)"
+                }
             }
         },
         Other = {},
