@@ -213,7 +213,8 @@ return {
                 name = "Spectronomicon",
                 text = {
                     "Create a {C:spectral}Spectral{} Card",
-                    "when another Joker is {C:attention}sold",
+                    "when another non-{C:common}Common",
+                    "Joker is {C:attention}sold",
                     "{C:inactive}(Must have room)"
                 }
             }

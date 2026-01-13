@@ -34,7 +34,7 @@ SMODS.Joker
         -- local config = card.ability.extra
         local other_joker_sold = context.selling_card and context.card.ability.set == "Joker" and context.card ~= card
 
-                if other_joker_sold and J_O_Y.create_consumable{ set = "Spectral" } then
+                if other_joker_sold and not context.card:is_rarity(1) and J_O_Y.create_consumable{ set = "Spectral" } then
                     return {
                         message = localize "k_plus_spectral",
                         colour = G.C.SECONDARY_SET.Spectral,
