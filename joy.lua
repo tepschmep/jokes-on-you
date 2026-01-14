@@ -79,6 +79,7 @@ load {
         "trick_or_treater",
         "green_glass_door",
         "scratch_art",
+        "conspiracy_theorist",
 
         --Rare Jokers
         "jokerman",

@@ -217,6 +217,14 @@ return {
                     "Joker is {C:attention}sold",
                     "{C:inactive}(Must have room)"
                 }
+            },
+            j_o_y_conspiracy_theorist = {
+                name = "Conspiracy Theorist",
+                text = {
+                    "Create a {C:spectral}Spectral{} Card",
+                    "for every {C:attention}#2#{} {C:planet}Planet{} cards used",
+                    "{C:inactive}(Currently {C:attention}#1#{C:inactive}/{C:attention}#2#{C:inactive}){}"
+                }
             }
         },
         Other = {},
