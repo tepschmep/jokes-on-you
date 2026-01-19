@@ -233,6 +233,14 @@ return {
                     "per {C:attention}empty Joker slot",
                     "{C:inactive}(Currently {C:money}$#2#{C:inactive})"
                 }
+            },
+            j_o_y_cosmic_brownie = {
+                name = "Cosmic Brownie",
+                text = {
+                    "Sell this card to",
+                    "create {C:attention}#1#{} free",
+                    "{C:attention}Orbital Tags"
+                }
             }
         },
         Other = {},

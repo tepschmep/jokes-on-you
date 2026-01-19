@@ -75,19 +75,22 @@ load {
         "search_and_find",
         "stock_photo",
         "imaginary_friend",
+        "cosmic_brownie",
 
-        --Uncommon Jokers
+        -- Uncommon Jokers
         "trick_or_treater",
         "green_glass_door",
         "scratch_art",
-        "conspiracy_theorist",
 
-        --Rare Jokers
+        -- Rare Jokers
         "jokerman",
         "heads_or_tails",
         "spectronomicon",
 
-        --Disabled content
+        -- Page 3
+        -- "conspiracy_theorist",
+
+        -- Disabled content
         -- "haunted_mirror", --> Temporarily disabled due to instability
 
     }
