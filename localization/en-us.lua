@@ -225,6 +225,14 @@ return {
                     "for every {C:attention}#2#{} {C:planet}Planet{} cards used",
                     "{C:inactive}(Currently {C:attention}#1#{C:inactive}/{C:attention}#2#{C:inactive}){}"
                 }
+            },
+            j_o_y_imaginary_friend = {
+                name = "Imaginary Friend",
+                text = {
+                    "Earn {C:money}$#1#{} at end of round",
+                    "per {C:attention}empty Joker slot",
+                    "{C:inactive}(Currently {C:money}$#2#{C:inactive})"
+                }
             }
         },
         Other = {},
