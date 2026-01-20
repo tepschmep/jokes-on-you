@@ -237,9 +237,11 @@ return {
             j_o_y_cosmic_brownie = {
                 name = "Cosmic Brownie",
                 text = {
-                    "Sell this card to",
-                    "create {C:attention}#1#{} free",
-                    "{C:attention}Orbital Tags"
+                    "Sell this card to create",
+                    "{C:attention}#1#{} copies of your",
+                    "last used {C:planet}Planet{} card",
+                    "{s:0.8,C:inactive}(Must have room)",
+                    "{C:inactive}(Currently {C:attention}#2#{C:inactive})"
                 }
             }
         },

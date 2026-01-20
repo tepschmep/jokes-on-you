@@ -75,7 +75,7 @@ load {
         "search_and_find",
         "stock_photo",
         "imaginary_friend",
-        "cosmic_brownie",
+       -- "cosmic_brownie",
 
         -- Uncommon Jokers
         "trick_or_treater",

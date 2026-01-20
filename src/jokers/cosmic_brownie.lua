@@ -18,16 +18,24 @@ SMODS.Joker
 
     config = {
         extra = {
-            tag_count = 2
+            planet_count = 2
         }
     },
 
     loc_vars = function(self, info_queue, card)
-        table.insert(info_queue, G.P_TAGS.tag_orbital )
         local config = card.ability.extra
+        local planet = G.GAME.j_o_y_last_planet
+        local label
+
+        if G.GAME.j_o_y_last_planet then
+            table.insert(info_queue, planet.center)  
+            label = localize { type = "name_text", set = planet.set, key = planet.key }
+        else
+            label = localize "k_none"
+        end
 
         return {
-            vars = { config.tag_count }
+            vars = { config.planet_count, label }
         }
     end,
 
@@ -35,22 +43,15 @@ SMODS.Joker
         local config = card.ability.extra
 
         if context.selling_self then
-            -- i'm not using our function for this only because im making one type of tag
-            -- some of this is repurposed from Paperback
-            for i = 1, config.tag_count do
-                local available_hands = {}
-                local random_orbital = Tag("tag_orbital", false, "Small")
-
-                for _, k in ipairs(G.handlist) do
-                    local hand = G.GAME.hands[k]
-                    if hand.visible then
-                        available_hands[#available_hands + 1] = k
-                    end
-                end
-
-                random_orbital.ability.orbital_hand = pseudorandom_element(available_hands, pseudoseed("j_o_y_cosmic_brownie"))
-                add_tag(random_orbital)
-            end
+            print "a"
         end
+
     end
 }
+
+SMODS.current_mod.calculate = function(self, context)
+    if context.using_consumeable and context.consumeable.ability.set == "Planet" then
+         G.GAME.j_o_y_last_planet = context.consumeable.config.center
+         print(G.GAME.j_o_y_last_planet)
+    end
+end
