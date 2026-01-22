@@ -33,6 +33,7 @@ SMODS.Joker
     },
 
     loc_vars = function(self, info_queue, card)
+        table.insert(info_queue, { key = 'e_negative', set = 'Edition', config = { extra = 1 } })
         local config = card.ability.extra
 
         return {
