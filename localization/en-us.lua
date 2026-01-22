@@ -243,6 +243,15 @@ return {
                     "{s:0.8,C:inactive}(Must have room)",
                     "{C:inactive}(Currently {C:attention}#2#{C:inactive})"
                 }
+            },
+            j_o_y_whoopee_cushion = {
+                name = "Whoopee Cushion",
+                text = {
+                    "If {C:attention}first hand{} of round",
+                    "is a {C:attention}single #1#{},",
+                    "{C:attention}destroy{} it and",
+                    "create a {C:attention}#2# tag{}"
+                }
             }
         },
         Other = {},
@@ -263,7 +272,8 @@ return {
             j_o_y_you_lose = "You Lose!",
             j_o_y_flushed = "Flushed!",
             j_o_y_used_up = "Used Up!",
-            j_o_y_wheel = "Wheel!"
+            j_o_y_wheel = "Wheel!",
+            j_o_y_fart = "Pfft!"
         },
         high_scores = {},
         labels = {},
