@@ -50,11 +50,10 @@ SMODS.Joker
         end
 
         if context.selling_card and can_copy(context.card) then
-            -- TODO learn how to change save data to include the last sold joker
-            G.j_o_y_last_sold_joker = context.card
+            G.GAME.j_o_y_last_sold_joker = context.card
         end
 
-        if G.j_o_y_last_sold_joker then
+        if G.GAME.j_o_y_last_sold_joker then
             local joker = context.blueprint and context.blueprint_copiers_stack[1] or card
             local ret = SMODS.blueprint_effect(joker, G.j_o_y_last_sold_joker, context)
             local ret2 = SMODS.blueprint_effect(joker, G.j_o_y_last_sold_joker, context)
