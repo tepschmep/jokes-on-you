@@ -38,7 +38,8 @@ SMODS.Joker
 		if context.individual and context.cardarea == G.play and context.other_card:is_face() and not context.blueprint then
 			config.mult = config.mult + config.mult_plus
 
-			G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) - config.money_loss
+            J_O_Y.add_money(-config.money_loss)
+
 			return {
 				extra = {
 					message = localize { type = "variable", key = "a_mult", vars = { config.mult_plus } },

@@ -31,7 +31,8 @@ load {
     type = "utils",
     filenames = {
         "creation",
-        "random"
+        "random",
+        "money"
     }
 }
 
