@@ -252,6 +252,14 @@ return {
                     "{C:attention}destroy{} it and",
                     "create a {C:attention}#2# tag{}"
                 }
+            },
+            j_o_y_bermuda_triangle = {
+                name = "Bermuda Triangle",
+                text = {
+                    "If {C:attention}scored hand{} is",
+                    "{C:attention}Three of a Kind{}, destroy",
+                    "all {C:attention}unscored{} cards"
+                }
             }
         },
         Other = {},
@@ -273,7 +281,8 @@ return {
             j_o_y_flushed = "Flushed!",
             j_o_y_used_up = "Used Up!",
             j_o_y_wheel = "Wheel!",
-            j_o_y_fart = "Pfft!"
+            j_o_y_fart = "Pfft!",
+            j_o_y_missing = "Missing!"
         },
         high_scores = {},
         labels = {},

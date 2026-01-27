@@ -83,6 +83,7 @@ load {
         "green_glass_door",
         "scratch_art",
         "whoopee_cushion",
+        "bermuda_triangle",
 
         -- Rare Jokers
         "jokerman",
