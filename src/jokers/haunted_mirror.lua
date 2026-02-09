@@ -19,8 +19,8 @@ SMODS.Joker
     loc_vars = function(self, info_queue, card)
         local label
 
-        if G.j_o_y_last_sold_joker then
-            local center = G.j_o_y_last_sold_joker.config.center
+        if G.GAME.j_o_y_last_sold_joker then
+            local center = G.GAME.j_o_y_last_sold_joker.config.center
 
             table.insert(info_queue, center)                                            -- Copied joker tooltip
             label = localize { type = "name_text", set = center.set, key = center.key } -- Copied joker name
@@ -55,8 +55,8 @@ SMODS.Joker
 
         if G.GAME.j_o_y_last_sold_joker then
             local joker = context.blueprint and context.blueprint_copiers_stack[1] or card
-            local ret = SMODS.blueprint_effect(joker, G.j_o_y_last_sold_joker, context)
-            local ret2 = SMODS.blueprint_effect(joker, G.j_o_y_last_sold_joker, context)
+            local ret = SMODS.blueprint_effect(joker, G.GAME.j_o_y_last_sold_joker, context)
+            local ret2 = SMODS.blueprint_effect(joker, G.GAME.j_o_y_last_sold_joker, context)
 
             if ret then
                 return SMODS.merge_effects{ ret, ret2 }
