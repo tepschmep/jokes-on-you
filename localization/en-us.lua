@@ -260,7 +260,15 @@ return {
                     "{C:attention}Three of a Kind{}, destroy",
                     "all {C:attention}unscored{} cards"
                 }
-            }
+            },
+            j_o_y_breaking_news = {
+                name = "Breaking News!",
+                text = {
+                    "Create a random {C:attention}Tag{}", 
+                    "if {C:attention}played hand{} has both", 
+                    "a {C:attention}Bonus Card{} and a {C:attention}Mult Card{}"
+                }
+            },
         },
         Other = {},
         Planet = {},

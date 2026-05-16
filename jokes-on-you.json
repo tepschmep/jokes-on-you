@@ -13,6 +13,6 @@
   "badge_text_colour": "bdcaff",
   "version": "0.1.0~alpha",
   "dependencies": [
-    "Steamodded (>=1.*)"
+    "Steamodded (>=1.*~)"
   ]
 }

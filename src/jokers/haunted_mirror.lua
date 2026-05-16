@@ -55,7 +55,7 @@ SMODS.Joker
 
         if G.GAME.j_o_y_last_sold_joker then
             local joker = context.blueprint and context.blueprint_copiers_stack[1] or card
-            local ret = SMODS.blueprint_effect(joker, G.GAME.j_o_y_last_sold_joker, context)
+            local ret = G.GAME.j_o_y_last_sold_joker:calculate_joker(context)
             local ret2 = SMODS.blueprint_effect(joker, G.GAME.j_o_y_last_sold_joker, context)
 
             if ret then

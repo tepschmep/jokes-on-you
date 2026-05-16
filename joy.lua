@@ -77,6 +77,7 @@ load {
         "stock_photo",
         "imaginary_friend",
         "cosmic_brownie",
+        "breaking_news",
 
         -- Uncommon Jokers
         "trick_or_treater",
