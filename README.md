@@ -4,7 +4,7 @@
 
 The mod is in an alpha state, so any and all bug reports or suggestions are more than welcome. As of right now, it contains:
 
-- 15 new Jokers
+- 30 new Jokers
 - More content on the way...
 
 ## Installation
