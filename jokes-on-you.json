@@ -11,7 +11,7 @@
   "main_file": "joy.lua",
   "badge_colour": "180030",
   "badge_text_colour": "bdcaff",
-  "version": "0.1.0~alpha",
+  "version": "0.2.0~alpha",
   "dependencies": [
     "Steamodded (>=1.*~)"
   ]
