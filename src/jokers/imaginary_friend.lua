@@ -1,12 +1,11 @@
 SMODS.Joker
 {
-    key = "foam_finger",
+    key = "imaginary_friend",
     atlas = "jokers",
     pos = {
         x = 7,
-        y = 0
+        y = 2
     },
-    pixel_size = { w = 59 },
     unlocked = true,
     discovered = false,
     rarity = 1, -- Common
@@ -19,7 +18,7 @@ SMODS.Joker
 
     config = {
         extra = {
-            hands = 1
+            pay_per = 3
         }
     },
 
@@ -27,19 +26,14 @@ SMODS.Joker
         local config = card.ability.extra
 
         return {
-            vars = { config.hands }
+            vars = { config.pay_per, G.jokers and ((G.jokers.config.card_limit - #G.jokers.cards) * config.pay_per) or config.pay_per }
         }
     end,
 
-    add_to_deck = function(self, card, from_debuff)
+    calc_dollar_bonus = function(self, card)
         local config = card.ability.extra
+        local payout = G.jokers and ((G.jokers.config.card_limit - #G.jokers.cards) * config.pay_per) or config.pay_per
 
-        G.GAME.round_resets.hands = G.GAME.round_resets.hands + config.hands
-    end,
-
-    remove_from_deck = function(self, card, from_debuff)
-        local config = card.ability.extra
-
-        G.GAME.round_resets.hands = G.GAME.round_resets.hands - config.hands
+        return payout
     end
 }

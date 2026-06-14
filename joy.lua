@@ -1,3 +1,5 @@
+J_O_Y = {}
+
 local function load(arg)
     if type(arg) == "string" then
         assert(SMODS.load_file(arg))()
@@ -18,6 +20,22 @@ local function load(arg)
     error("undefined call")
 end
 
+SMODS.Atlas {
+    key = "modicon",
+    path = "mod_icon.png",
+    px = 32,
+    py = 32
+}
+
+load {
+    type = "utils",
+    filenames = {
+        "creation",
+        "random",
+        "money"
+    }
+}
+
 load {
     type = "jokers",
     atlas = {
@@ -27,6 +45,8 @@ load {
         py = 95
     },
     filenames = {
+        -- Page 1
+
         -- Common Jokers
         "command_tower",
         "foam_finger",
@@ -34,19 +54,48 @@ load {
         "crit_chance_item",
         "sunday_comic",
         "trivia_card",
+        "down_the_drain",
 
         -- Uncommon Jokers
         "barbeque",
-        "down_the_drain",
         "silly_band",
         "macaroni_art",
         "wild_draw_4",
-        "jimbazzaro",
+        "jimbo_in_your_face",
 
         -- Rare Jokers
-        -- "haunted_mirror", --> Temporarily disabled due to instability
         "immortal_snail",
-        "jimbo_in_your_face",
-        "paddleball"
+        "paddleball",
+        "jimbazzaro",
+
+        -- Page 2
+
+        -- Common Jokers
+        "mini",
+        "pngjoker",
+        "search_and_find",
+        "stock_photo",
+        "imaginary_friend",
+        "cosmic_brownie",
+        "breaking_news",
+
+        -- Uncommon Jokers
+        "trick_or_treater",
+        "green_glass_door",
+        "scratch_art",
+        "whoopee_cushion",
+        "bermuda_triangle",
+
+        -- Rare Jokers
+        "jokerman",
+        "heads_or_tails",
+        "spectronomicon",
+
+        -- Page 3
+        -- "conspiracy_theorist",
+
+        -- Disabled content
+        -- "haunted_mirror", --> Temporarily disabled due to instability
+
     }
 }

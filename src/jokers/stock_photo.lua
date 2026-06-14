@@ -1,15 +1,15 @@
 SMODS.Joker
 {
-    key = "jimbo_in_your_face",
+    key = "stock_photo",
     atlas = "jokers",
     pos = {
-        x = 0,
-        y = 1
+        x = 9,
+        y = 2
     },
     unlocked = true,
     discovered = false,
-    rarity = 2, -- Uncommon
-    cost = 6,
+    rarity = 1, -- Common
+    cost = 4,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
@@ -18,7 +18,7 @@ SMODS.Joker
 
     config = {
         extra = {
-            mult = 40
+            chips = 30
         }
     },
 
@@ -26,13 +26,15 @@ SMODS.Joker
         local config = card.ability.extra
 
         return {
-            vars = { config.mult }
+            vars = { config.chips }
         }
     end,
 
     calculate = function(self, card, context)
         local config = card.ability.extra
 
-		if context.joker_main then return { mult = config.mult } end
+        if context.other_joker and (context.other_joker.config.center.rarity == 1 or context.other_joker.config.center.rarity == "Common") then
+            return { chips = config.chips }
+        end
     end
 }
